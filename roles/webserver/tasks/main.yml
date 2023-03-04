@@ -1,0 +1,4 @@
+---
+- name: installing httpd
+  action: yum pkg=httpd state=removed
+

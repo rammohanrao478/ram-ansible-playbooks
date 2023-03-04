@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  vars:
+    pkgname: tree
+  tasks:
+  - name: installing tree
+    action: yum name='{{pkgname}}' state=absent

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: creating user  
+    user:
+      name: sonia
+  - name: creating directory
+    file:
+      path: /home/ansible/playbook1
+      state: directory
+      owner: sonia
+      group: sonia
+      mode: 0755
+

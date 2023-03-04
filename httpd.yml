@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  tasks:
+  - yum:
+      name: httpd
+      state: installed
+  - name: starting httpd
+    service:
+      name: httpd
+      state: started

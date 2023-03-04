@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: installing packages
+    action: yum name='{{ab}}' state=absent
+
+

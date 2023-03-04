@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    pkgname: tree
+    xyz: httpd
+  tasks: 
+  - name: installing tree
+    action: yum name='{{pkgname}}' state=present
+  - name: installing httpd
+    action: yum name='{{xyz}}' state=present

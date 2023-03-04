@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: installing  git maven tree httpd
+    user: name='{{items}}' state=present
+    with_items:
+        - git
+        - maven
+        - tree
+        - httpd
+        - java

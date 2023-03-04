@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: installing git
+    action: yum name=git state=present
+    tags: t1
+  - name: installing httpd
+    action: yum pkg=httpd state=present
+    tags: t2
+  - name: installing tree
+    action: yum pkg=tree state=present
+    tags: t3
+

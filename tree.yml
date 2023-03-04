@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  tasks:
+  - name: installing tree
+    action: yum name=tree state=absent
