@@ -1,0 +1,7 @@
+---
+- name: install httpd
+  hosts: all
+  become: yes
+  tasks: 
+  - name: install packge
+    action: yum name=httpd  state=present
